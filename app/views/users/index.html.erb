@@ -1,0 +1,26 @@
+<h1>Add a contact</h1>
+
+<div class="container">
+
+  <div>
+    <%= form_tag users_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a user"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <div>
+    <% @users.each do |user| %>
+    <% unless current_user.connected_users.include?(user.username) %>
+     <div>
+        <p><%=user.username %> - <%= link_to "Connect", connect_user_path(user.id), remote: true, method: :post %></p>
+      </div>
+      <% else %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
