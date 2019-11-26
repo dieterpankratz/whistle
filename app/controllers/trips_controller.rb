@@ -18,6 +18,11 @@ class TripsController < ApplicationController
   #   redirect_to trip_path(@trip)
   # end
 
+  def edit
+    set_trip
+    authorize @trip
+  end
+
   private
 
   def set_trip

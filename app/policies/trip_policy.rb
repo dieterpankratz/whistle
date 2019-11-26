@@ -6,6 +6,6 @@ class TripPolicy < ApplicationPolicy
   end
 
   def edit?
-    true
+    record.user == user
   end
 end
