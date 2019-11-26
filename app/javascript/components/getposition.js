@@ -8,7 +8,7 @@ function getPosition() {
       navigator.geolocation.getCurrentPosition(successPosition);
     }
     else
-     document.getElementById("result").innerHTML = "Your Browser does not support Geolocation API!!!"
+     document.getElementById("result").innerHTML = "Your Browser does not support Geolocation API!"
 }
 
   function successPosition(position) {
@@ -19,4 +19,3 @@ function getPosition() {
 }
 
 export { getPosition };
-export { successPosition };
