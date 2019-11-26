@@ -10,6 +10,10 @@ class User < ApplicationRecord
   has_many :responder_relationships, foreign_key: 'asker_id', class_name: 'Connection'
   has_many :responders, through: :responder_relationships, source: :responder
 
+  has_many :alerts
+  has_many :trips
+  has_many :responses
+
   def connect(user_id)
     responder_relationships.create(responder_id: user_id)
   end
