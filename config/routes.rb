@@ -7,5 +7,5 @@ Rails.application.routes.draw do
       post :connect
     end
   end
-  resources :trips, only: [:show]
+  resources :trips, only: [:show, :edit, :update]
 end
