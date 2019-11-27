@@ -17,7 +17,7 @@ function currentPosition() {
             alert('Geolocation information is not available');
             break;
           default:
-            alert('unlknown error');
+            alert('unknown error');
             break;
         }
       }
