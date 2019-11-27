@@ -1,0 +1,9 @@
+<div class="container">
+<h1>My contacts</h1>
+  <% @connections.each do |connection| %>
+      <p data-user="<%= connection.responder.id %>">
+        <%= connection.responder.username %>
+        <%= link_to "Delete connection", unconnect_user_path(connection.responder), method: :post%>
+      </p>
+  <% end %>
+</div>

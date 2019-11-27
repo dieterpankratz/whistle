@@ -15,7 +15,10 @@ function getPosition() {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
 
-    document.getElementById("result").innerHTML = "Latitude: " + lat + "<br />Longitude: " + long;
+    const result = document.getElementById("result");
+    if (result) {
+      result.innerHTML = "Latitude: " + lat + "<br />Longitude: " + long;
+    }
 }
 
 export { getPosition };
