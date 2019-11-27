@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     else
       @users = User.all_except(current_user)
     end
+    @users = policy_scope(User)
   end
 
   def connect
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
     #   end
     # end
     redirect_to users_path
+    authorize @user
   end
 
   def unconnect
@@ -31,6 +33,7 @@ class UsersController < ApplicationController
     # end
 
     redirect_to dashboard_path
+    authorize @user
   end
 
   private
