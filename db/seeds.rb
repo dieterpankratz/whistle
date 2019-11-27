@@ -1,9 +1,9 @@
 puts 'Cleaning database...'
 Connection.destroy_all
 Alert.destroy_all
+Trip.destroy_all
 Response.destroy_all
 User.destroy_all
-Trip.destroy_all
 
 puts 'Creating users...'
 user_1 = User.create!(name: "Thomas", email: "user_1@example.com", password: "123456", username: "Tomtom")
@@ -20,38 +20,17 @@ user_10 = User.create!(name: "Andrey", email: "user_10@example.com", password: "
 puts 'Users created!'
 
 puts 'Creating trips...'
-trip_1 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_2 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_3 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_4 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_5 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_6 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_7 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_8 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_9 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_10 = Trip.create!(start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_1 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_2 = Trip.create!(user_id: user_2.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.542751, end_long: 13.423660, start_point: "Berlin", end_point: "Berlin")
+trip_3 = Trip.create!(user_id: user_3.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.510810, end_long: 13.457460, start_point: "Berlin", end_point: "Berlin")
+trip_4 = Trip.create!(user_id: user_4.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.520008, end_long: 13.404954, start_point: "Berlin", end_point: "Berlin")
+trip_5 = Trip.create!(user_id: user_5.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_6 = Trip.create!(user_id: user_6.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_7 = Trip.create!(user_id: user_7.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_8 = Trip.create!(user_id: user_8.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_9 = Trip.create!(user_id: user_9.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_10 = Trip.create!(user_id: user_10.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
 
 puts 'Trips created!'
-
-# puts "testing"
-# trip_1.user = user_1
-# puts "user_1"
-# trip_2.user = user_2
-# puts "user_2"
-# trip_3.user = user_3
-# puts "user_3"
-# trip_4.user = user_4
-# puts "user_4"
-# trip_5.user = user_5
-# puts "user_5"
-# trip_6.user = user_6
-# puts "user_6"
-# trip_7.user = user_7
-# puts "user_1"
-# trip_8.user = user_8
-# puts "user_2"
-# trip_9.user = user_9
-# puts "user_3"
-# trip_10.user = user_10
 
 puts 'Finished!'
