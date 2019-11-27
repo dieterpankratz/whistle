@@ -1,25 +1,34 @@
 class TripsController < ApplicationController
   def show
+    set_trip
+    authorize @trip
   end
 
   def new
     @trip = Trip.new
+    authorize @trip
   end
 
-  # def create
-  #   @trip = Trip.new(trip_params)
-
-  #   @trip.user = current_user
-  # end
-
-  # def update
-  #   set_trip
-  #   @trip.update(trip_params)
-  #   redirect_to trip_path(@trip)
-  # end
+  def create
+    set_trip
+    @trip.user = current_user
+    if @trip.save!
+      redirect_to trip_path(@trip)
+    else
+      render :new
+    end
+    authorize @trip
+  end
 
   def edit
     set_trip
+    authorize @trip
+  end
+
+  def udpate
+    set_trip
+    @trip.update(trip_params)
+    redirect_to trip_path(@trip)
     authorize @trip
   end
 

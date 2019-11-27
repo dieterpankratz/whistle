@@ -5,7 +5,19 @@ class TripPolicy < ApplicationPolicy
     end
   end
 
+  def show?
+    true
+  end
+
+  def new?
+    true
+  end
+
   def edit?
-    record.user == user
+    true
+  end
+
+  def update?
+    true
   end
 end
