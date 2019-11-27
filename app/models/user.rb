@@ -14,7 +14,21 @@ class User < ApplicationRecord
   has_many :trips
   has_many :responses
 
+  scope :all_except, ->(user) { where.not(id: user) }
+
   def connect(user_id)
     responder_relationships.create(responder_id: user_id)
+  end
+
+  def unconnect(user_id)
+    responder_relationships.find_by(responder_id: user_id).destroy
+  end
+
+  def connected_users
+    # all the ids of users we connected with already
+    askers = self.askers.pluck(:username)
+    responders = self.responders.pluck(:username)
+    users = askers + responders
+    return users.uniq
   end
 end

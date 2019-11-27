@@ -1,0 +1,13 @@
+<div class="trip-card">
+<%= simple_form_for @trip do %>
+  <div class="form-group">
+    <span style="font-weight:bold"><%= label_tag :start_point, 'Where are you?' %></span>
+    <%= text_field_tag :start_point, nil, class: 'form-control', id: 'exampleInputEmail1', placeholder: 'Location' %>
+  </div>
+  <div class="form-group">
+    <span style="font-weight:bold"><%= label_tag :end_point, 'Where are you going?' %></span>
+    <%= text_field_tag :end_point, nil, class: 'form-control', id: 'exampleInputPassword1', placeholder: 'Destination' %>
+  </div>
+<% end %>
+</div>
+
