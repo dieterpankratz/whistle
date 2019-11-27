@@ -1,6 +1,4 @@
 import "bootstrap";
-import { getPosition } from '../components/getposition';
-import { successPosition } from '../components/getposition';
-
-getPosition();
+import { currentPosition } from '../components/currentPosition';
+currentPosition();
 
