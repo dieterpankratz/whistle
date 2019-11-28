@@ -32,6 +32,17 @@ class TripsController < ApplicationController
     authorize @trip
   end
 
+  def index
+    @trips = Trip.where.not(latitude: nil, longitude: nil)
+
+    @markers = @trips.map do |trip|
+      {
+        lat: trip.latitude,
+        lng: trip.longitude
+      }
+    end
+  end
+
   private
 
   def set_trip

@@ -20,12 +20,12 @@ user_10 = User.create!(name: "Andrey", email: "user_10@example.com", password: "
 puts 'Users created!'
 
 puts 'Creating trips...'
-trip_1 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
-trip_2 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.542751, end_long: 13.423660, start_point: "Berlin", end_point: "Berlin")
-trip_3 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.510810, end_long: 13.457460, start_point: "Berlin", end_point: "Berlin")
-trip_4 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.520008, end_long: 13.404954, start_point: "Berlin", end_point: "Berlin")
-trip_5 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.491290, end_long: 13.416200, start_point: "Berlin", end_point: "Berlin")
-trip_6 = Trip.create!(user_id: user_1.id, start_lat: 52.506890, start_long: 13.391410, end_lat: 52.477030, end_long: 13.420550, start_point: "Berlin", end_point: "Berlin")
+trip_1 = Trip.create!(user: user_1, start_point: "Checkpoint Charlie, Berlin", end_point: "Alexanderplatz, Berlin")
+# trip_2 = Trip.create!(user_id: user_1.id, start_point: "Berlin", end_point: "Berlin")
+# trip_3 = Trip.create!(user_id: user_1.id, start_point: "Berlin", end_point: "Berlin")
+# trip_4 = Trip.create!(user_id: user_1.id, start_point: "Berlin", end_point: "Berlin")
+# trip_5 = Trip.create!(user_id: user_1.id, start_point: "Berlin", end_point: "Berlin")
+# trip_6 = Trip.create!(user_id: user_1.id, start_point: "Berlin", end_point: "Berlin")
 puts 'Trips created!'
 
 puts 'Creating connections...'
