@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
       <div class="trip-card">
         <%= simple_form_for @trip do |f| %>
-          <%= f.input :end_point %>
+          <%= f.input :end_point, html: {id: "end_point"} %>
           <%= f.input :start_lat, :as => :hidden, html: {id: "start_lat"}  %>
           <%= f.input :start_long, :as => :hidden, html: {id: "start_long"}  %>
           <%= f.submit "Set destination", class: "btn btn-primary" %>

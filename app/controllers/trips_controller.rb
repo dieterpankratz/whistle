@@ -1,7 +1,6 @@
 class TripsController < ApplicationController
   def show
     set_trip
-    raise
     authorize @trip
   end
 

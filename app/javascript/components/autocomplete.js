@@ -1,10 +1,10 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
-    var flatAddress = document.getElementById('flat_address');
+    var destination = document.getElementById('end_point');
 
-    if (flatAddress) {
-      var autocomplete = new google.maps.places.Autocomplete(flatAddress, { types: [ 'geocode' ] });
-      google.maps.event.addDomListener(flatAddress, 'keydown', function(e) {
+    if (destination) {
+      var autocomplete = new google.maps.places.Autocomplete(destination, { types: [ 'geocode' ] });
+      google.maps.event.addDomListener(destination, 'keydown', function(e) {
         if (e.key === "Enter") {
           e.preventDefault(); // Do not submit the form on Enter.
         }
