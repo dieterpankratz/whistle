@@ -1,3 +1,5 @@
+require 'twilio-ruby'
+
 class SendTwilioMessage
   def initialize(alert)
     @alert = alert
@@ -9,9 +11,9 @@ class SendTwilioMessage
 
   def send_alert
     @alert.user.responders.each do |responder|
-      next if responder.blank?
+      next if responder.phone_number.blank?
 
-      send_message(alert.kind, responder.phone_number, responder.name)
+      send_message(@alert.kind, responder.phone_number, responder.name)
     end
   end
 
@@ -20,8 +22,10 @@ class SendTwilioMessage
   def send_message(kind, to, responder_name)
     if kind == 'share'
       message = "Hey #{responder_name}, I am using Whistle, here is my itinary: link to "
-    else
+    elsif kind == 'whistle'
       message = "URGENT! #{responder_name} I NEED YOUR HELP, here is my current location: link to"
+    else
+      message = "All good #{responder_name}, I reached my destination ! Thanks !"
     end
     @client.messages.create(
       from: @service_number,

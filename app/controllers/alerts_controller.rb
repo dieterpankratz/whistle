@@ -9,6 +9,7 @@ class AlertsController < ApplicationController
     @trip = Trip.find(params[:trip_id])
     @alert.user = current_user
     @alert.trip = @trip
+    authorize @alert
 
     if params[:kind] == "share"
       @alert.kind = "share"
@@ -16,12 +17,10 @@ class AlertsController < ApplicationController
       @alert.kind = "whistle"
       # set lat and lng
     end
-    authorize @alert
     if @alert.save
       SendTwilioMessage.new(@alert).send_alert
     end
       redirect_to alert_path(@alert)
-    end
   end
 
   def edit
