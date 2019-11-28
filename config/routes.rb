@@ -8,10 +8,11 @@ Rails.application.routes.draw do
       post :unconnect
     end
   end
-  resources :trips do
-    resources :alerts, only: [:show, :create, :new, :destroy]
+  resources :trips, only: [:show, :new, :create, :edit, :update] do
+    resources :alerts, only: [:create]
   end
   resources :connections, only: [:destroy]
+  resources :alerts, only: [:show]
   get 'dashboard', to: 'dashboards#show', as: 'dashboard'
 end
 
