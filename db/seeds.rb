@@ -1,16 +1,16 @@
 puts 'Cleaning database...'
-Connection.destroy_all
 Alert.destroy_all
 Trip.destroy_all
+Connection.destroy_all
 Response.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
-user_1 = User.create!(name: "Thomas", email: "user_1@example.com", password: "123456", username: "Tomtom")
-user_2 = User.create!(name: "Chloé", email: "user_2@example.com", password: "123456", username: "Baba")
-user_3 = User.create!(name: "Dieter", email: "user_3@example.com", password: "123456", username: "Didi")
-user_4 = User.create!(name: "Lyndsey", email: "user_4@example.com", password: "123456", username: "Lyn")
-user_5 = User.create!(name: "Morgane", email: "user_5@example.com", password: "123456", username: "Momo")
+user_1 = User.create!(name: "Chloé", email: "user_1@example.com", password: "123456", username: "Baba", phone_number: "+4915786608080")
+user_2 = User.create!(name: "Morgane", email: "user_2@example.com", password: "123456", username: "Momo", phone_number: "+4917659143289")
+user_3 = User.create!(name: "Thomas", email: "user_3@example.com", password: "123456", username: "Tomtom")
+user_4 = User.create!(name: "Dieter", email: "user_4@example.com", password: "123456", username: "Didi")
+user_5 = User.create!(name: "Lyndsey", email: "user_5@example.com", password: "123456", username: "Lyn")
 user_6 = User.create!(name: "Dimitri", email: "user_6@example.com", password: "123456", username: "Dimi")
 user_7 = User.create!(name: "Isabelle", email: "user_7@example.com", password: "123456", username: "Isa")
 user_8 = User.create!(name: "Santiago", email: "user_8@example.com", password: "123456", username: "Santi")
@@ -38,8 +38,8 @@ connection_5 = Connection.create!(asker_id: user_1.id, responder_id: user_6.id)
 puts 'Connections created!'
 
 puts 'Creating alerts...'
-alert_1 = Alert.create!(user_id: user_1.id, lat: 52.510365, long: 13.389967)
-# alert_2 = Alert.create!(user_id: user_1.id, lat: 52.493835, long: 13.387999)
+alert_1 = Alert.create!(user_id: user_1.id, lat: 52.510365, long: 13.389967, trip_id: trip_1.id, kind: "share")
+alert_2 = Alert.create!(user_id: user_1.id, lat: 52.493835, long: 13.387999, trip_id: trip_2.id, kind: "whistle")
 # alert_3 = Alert.create!(user_id: user_1.id, lat: 52.502342, long: 13.394953)
 # alert_4 = Alert.create!(user_id: user_1.id, lat: 52.502087, long: 13.417193)
 # alert_5 = Alert.create!(user_id: user_1.id, lat: 52.499359, long: 13.418920)
