@@ -4,11 +4,6 @@ class AlertsController < ApplicationController
     authorize @alert
   end
 
-  # def new
-  #   @alert = Alert.new
-  #   authorize @alert
-  # end
-
   def create
     @alert = Alert.new
     @trip = Trip.find(params[:trip_id])
@@ -22,40 +17,30 @@ class AlertsController < ApplicationController
       # set lat and lng
     elsif params[:kind] == "safe"
       @alert.kind = "safe"
-
     end
-
-    # if params[:kind] == whistle
-    #   twiilio is this
-    # elsif params[:kind] == share
-    #   twilio is this
-    #else params[:kind] == safe
-        #twilio is this
-    # end
 
     authorize @alert
-    # SEND TO ALL USERS
-    # 1. create alert
-    if @alert.save
-    # 2. get current user.. and find their connections
-      current_user.connections.each do |connection|
-        # 3. for EACH connection
-        # 4. -> send alert via text(twilio)
-        # send text through twillio
-      end
-      if @alert.kind == "safe"
-        redirect_to trip_path(@trip)
-      else
-        redirect_to alert_path(@alert)
-      end
-    end
 
-    # if @trip.save!
-    #   redirect_to trip_path(@trip)
-    # else
-    #   render :new
-    # end
-    # authorize @trip
+    if @alert.save
+      SendTwilioMessage.new(@alert).send_alert
+    end
+    if @alert.kind == "safe"
+      redirect_to trip_path(@trip)
+    else
+      redirect_to alert_path(@alert)
+    end
+  end
+
+  def edit
+    set_alert
+    authorize @alert
+  end
+
+  def update
+    set_alert
+    @alert.update(alert_params)
+    redirect_to "alert edit page"
+    authorize @alert
   end
 
   private
@@ -64,6 +49,8 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
     authorize @alert
   end
-end
 
-# alert => whistle, share
+  def alert_params
+    params.require(:alert).permit(:kind, :trip_id, :lat, :long, :user_id)
+  end
+end
