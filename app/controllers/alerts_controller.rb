@@ -20,12 +20,17 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "whistle"
       @alert.kind = "whistle"
       # set lat and lng
+    elsif params[:kind] == "safe"
+      @alert.kind = "safe"
+
     end
 
     # if params[:kind] == whistle
     #   twiilio is this
-    # else
-    #   twilio is thate
+    # elsif params[:kind] == share
+    #   twilio is this
+    #else params[:kind] == safe
+        #twilio is this
     # end
 
     authorize @alert
@@ -38,10 +43,12 @@ class AlertsController < ApplicationController
         # 4. -> send alert via text(twilio)
         # send text through twillio
       end
-      redirect_to alert_path(@alert)
+      if @alert.kind == "safe"
+        redirect_to trip_path(@trip)
+      else
+        redirect_to alert_path(@alert)
+      end
     end
-
-
 
     # if @trip.save!
     #   redirect_to trip_path(@trip)

@@ -1,2 +1,3 @@
 <h1>test</h1>
 <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post %>
+<%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post %>
