@@ -1,5 +1,3 @@
-require 'twilio-ruby'
-
 class SendTwilioMessage
   def initialize(alert)
     @alert = alert
