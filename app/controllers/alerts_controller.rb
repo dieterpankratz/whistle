@@ -16,10 +16,16 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "whistle"
       @alert.kind = "whistle"
       # set lat and lng
+    elsif params[:kind] == "safe"
+      @alert.kind = "safe"
     end
+
     if @alert.save
       SendTwilioMessage.new(@alert).send_alert
     end
+    if @alert.kind == "safe"
+      redirect_to trip_path(@trip)
+    else
       redirect_to alert_path(@alert)
   end
 
