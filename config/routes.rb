@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   end
   resources :trips, only: [:show, :new, :create, :edit, :update]
   resources :connections, only: [:destroy]
+  resources :alerts, only: [:show, :create, :new, :destroy]
   get 'dashboard', to: 'dashboards#show', as: 'dashboard'
 end
+
