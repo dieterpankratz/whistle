@@ -31,4 +31,9 @@ class User < ApplicationRecord
     users = askers + responders
     return users.uniq
   end
+
+  def connections
+    users = self.askers + self.responders
+    return users.uniq
+  end
 end
