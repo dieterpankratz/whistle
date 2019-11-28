@@ -27,6 +27,7 @@ class AlertsController < ApplicationController
       redirect_to trip_path(@trip)
     else
       redirect_to alert_path(@alert)
+    end
   end
 
   def edit
