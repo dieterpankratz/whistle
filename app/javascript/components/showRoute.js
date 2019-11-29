@@ -37,7 +37,6 @@ function drawPath() {
 
   var mapOptions = {
     center: new google.maps.LatLng(points[0].lat,points[0].long),
-    zoom: 10
     zoom: 15,
     zoomControl: false,
     mapTypeControl: false,
