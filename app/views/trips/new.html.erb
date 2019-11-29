@@ -16,3 +16,10 @@
 <div id="address" style="width: 100%; height: 50px;"></div>
 <div id="map" style="width: 100%; height: 750px;"></div>
 
+
+<%= content_for :after_js do  %>
+  <%= javascript_pack_tag "map" %>
+  <%= javascript_pack_tag 'trips_new' %>
+<% end %>
+
+

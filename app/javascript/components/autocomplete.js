@@ -1,7 +1,6 @@
 function autocomplete() {
-  document.addEventListener("DOMContentLoaded", function() {
     var destination = document.getElementById('trip_end_point');
-    console.log(destination)
+    console.log({destination})
 
     if (destination) {
       var autocomplete = new google.maps.places.Autocomplete(destination, { types: [ 'geocode' ] });
@@ -12,7 +11,6 @@ function autocomplete() {
         }
       });
     }
-  });
 }
 
 export { autocomplete };
