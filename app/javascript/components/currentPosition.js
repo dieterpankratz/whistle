@@ -74,6 +74,13 @@ function currentPosition() {
     }
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // we need a marker on the current location of the user:
+    // (the marker will move as the user moves)
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map
+    });
     }
   }
 }

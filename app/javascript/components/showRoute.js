@@ -3,7 +3,7 @@ let tripMap;
 function showRoute() {
   // wait until the content of the page is loaded:
   // points[0] is current location. points[1] is destination.
-  points[0].lat = parseFloat(document.querySelector("#start_lat").innerHTML);
+  points[0].lat = document.querySelector("#start_lat").innerHTML;
   points[0].long = document.querySelector("#start_long").innerHTML;
   points[1].lat = document.querySelector("#end_lat").innerHTML;
   points[1].long = document.querySelector("#end_long").innerHTML;
