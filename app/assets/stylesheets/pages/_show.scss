@@ -1,36 +1,45 @@
 .whistle{
-background-color: #43ABA5;
-color: white;
-    position: absolute;
-    bottom: -16px;
-    left: 13%;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    padding: 83px;
+background-color: white;
+  padding: 40px;
+  margin: 0px;
+color: #43ABA5;
+border: solid #43ABA5;
+  border-radius: 15px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  bottom: 63px;
+  width: 100%;
+  text-align: center;
 }
 
 .safe{
 background-color: #43ABA5;
-    color: white;
-    position: absolute;
-    bottom: -102px;
-    left: 28%;
-    width: 193px;
-    height: 65px;
-    text-align: center;
-    padding: 19px;
+  padding: 15px;
+  margin: 0px;
+color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 .share{
 background-color: #43ABA5;
-    color: white;
-    position: absolute;
-    bottom: -2px;
-    left: 12%;
-    width: 300px;
-    height: 82px;
-    text-align: center;
-    padding: 28px;
-    margin-bottom: 20px;
+  padding: 15px;
+  margin: 0px;
+color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  bottom: 63px;
+  width: 100%;
+  text-align: center;
 }

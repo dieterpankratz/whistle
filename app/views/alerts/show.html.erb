@@ -1,6 +1,6 @@
 <div>
-  <div id="address" style="width: 100%; height: 50px;"></div>
-  <div id="map" style="width: 100%; height: 750px;"></div>
+
+  <div id="map" style="width: 100%; height: 100vh;"></div>
   <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post, class: "whistle" %>
   <%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post, class: "safe" %>
 </div>
