@@ -9,6 +9,7 @@ class AlertsController < ApplicationController
     @trip = Trip.find(params[:trip_id])
     @alert.user = current_user
     @alert.trip = @trip
+    authorize @alert
 
     if params[:kind] == "share"
       @alert.kind = "share"
@@ -18,8 +19,6 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "safe"
       @alert.kind = "safe"
     end
-
-    authorize @alert
 
     if @alert.save
       SendTwilioMessage.new(@alert).send_alert

@@ -32,6 +32,16 @@ class TripsController < ApplicationController
     authorize @trip
   end
 
+  # def index
+
+    # @trips = Trip.where.not(latitude: nil, longitude: nil)
+
+    # @markers = @trips.map do |trip|
+    #   {
+    #     lat: trip.latitude,
+    #     lng: trip.longitude
+    #   }
+    # end
   private
 
   def set_trip
@@ -39,6 +49,6 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-    params.require(:trip).permit(:start_point, :end_point)
+    params.require(:trip).permit(:start_lat, :start_long, :end_point)
   end
 end

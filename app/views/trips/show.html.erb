@@ -1,5 +1,10 @@
 <div>
-  <div id="address" style="width: 100%; height: 50px;"></div>
-  <div id="map" style="width: 100%; height: 750px;"></div>
-  <%= link_to "Send Destination", trip_alerts_path(@trip, kind: "share"), method: :post, class: "share" %>
+  <div id="tripMap" style="width: 100%; height: 700px;"></div>
+  <div hidden="true">
+    <p id="start_lat" ><%= @trip.start_lat %></p>
+    <p id="start_long" ><%= @trip.start_long %></p>
+    <p id="end_lat" ><%= @trip.end_lat %></p>
+    <p id="end_long" ><%= @trip.end_long %></p>
+  </div>
+  <%= link_to "Share my location", trip_alerts_path(@trip, kind: "share"), method: :post, class: "share" %>
 </div>
