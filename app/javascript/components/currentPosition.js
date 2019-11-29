@@ -70,7 +70,13 @@ function currentPosition() {
 
     var mapOptions = {
       center: startlatlng,
-      zoom: 15
+      zoom: 15,
+      zoomControl: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false
     }
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
