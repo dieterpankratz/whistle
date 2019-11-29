@@ -14,6 +14,7 @@ function showRoute() {
     zoom: 10
   }
 
+
   var tripMap = new google.maps.Map(document.getElementById("tripMap"), mapOptions)
   var latlngbounds = new google.maps.LatLngBounds();
 
@@ -37,6 +38,13 @@ function drawPath() {
   var mapOptions = {
     center: new google.maps.LatLng(points[0].lat,points[0].long),
     zoom: 10
+    zoom: 15,
+    zoomControl: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false
   }
 
   tripMap = new google.maps.Map(document.getElementById("tripMap"), mapOptions)

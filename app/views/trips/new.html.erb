@@ -1,18 +1,18 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <div class="trip-card">
+
+<!-- <div id="address" style="width: 100%; height: 50px;"></div> -->
+<div id="map" style="width: 100%; height: 100vh;"></div>
+
+<div class="destination-container">
+<!--   <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4"> -->
+<!--       <div class="trip-card"> -->
         <%= simple_form_for @trip do |f| %>
-          <%= f.input :end_point, html: {id: "end_point"} %>
+          <%= f.input :end_point, label: "Where are you going?", html: {id: "end_point"} %>
           <%= f.input :start_lat, :as => :hidden, html: {id: "start_lat"}  %>
           <%= f.input :start_long, :as => :hidden, html: {id: "start_long"}  %>
-          <%= f.submit "Set destination", class: "btn btn-primary" %>
+          <%= f.submit "Go !", class: "btn btn-primary" %>
         <% end %>
       </div>
-    </div>
-  </div>
+<!--     </div>
+  </div> -->
 </div>
-
-<div id="address" style="width: 100%; height: 50px;"></div>
-<div id="map" style="width: 100%; height: 750px;"></div>
-
