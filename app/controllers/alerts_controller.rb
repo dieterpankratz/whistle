@@ -24,7 +24,7 @@ class AlertsController < ApplicationController
       SendTwilioMessage.new(@alert).send_alert
     end
     if @alert.kind == "safe"
-      redirect_to trip_path(@trip)
+      redirect_to new_trip_path(@trip)
     else
       redirect_to alert_path(@alert)
     end
