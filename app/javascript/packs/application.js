@@ -7,4 +7,3 @@ currentPosition();
 currentLocationToForm();
 showRoute();
 autocomplete();
-
