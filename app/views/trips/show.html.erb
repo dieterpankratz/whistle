@@ -8,3 +8,9 @@
   </div>
   <%= link_to "Share my location", trip_alerts_path(@trip, kind: "share"), method: :post, class: "share" %>
 </div>
+
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag "map" %>
+  <%= javascript_pack_tag "show_route" %>
+<% end %>

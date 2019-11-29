@@ -1,3 +1,4 @@
+
 let points = [{}, {}];
 let tripMap;
 function showRoute() {

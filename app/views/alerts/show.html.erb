@@ -4,3 +4,9 @@
   <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post, class: "whistle" %>
   <%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post, class: "safe" %>
 </div>
+
+
+<%= content_for :after_js do  %>
+  <%= javascript_pack_tag "current_position" %>
+  <%#= javascript_pack_tag "map" %>
+<% end %>
