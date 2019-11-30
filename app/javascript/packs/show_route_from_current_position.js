@@ -1,3 +1,3 @@
-import { showRouteFromCurrentPosition } from '../components/showRouteFromCurrentPosition';
+import { showRouteFromCurrentPosition } from '../components/showRoute';
 
 showRouteFromCurrentPosition();
