@@ -8,6 +8,7 @@
   </div>
   <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post, class: "whistle" %>
   <%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post, class: "safe" %>
+  <div id="address"></div>
 </div>
 
 
