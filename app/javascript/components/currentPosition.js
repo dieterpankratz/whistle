@@ -5,22 +5,22 @@ function currentPosition() {
   var start = 1;
   // I want to have the map as soon as the page loads:
   window.onload = function() {
-     function onError(error) {
-        switch(error.code) {
-          case PERMISSION_DENIED:
-            alert('user denied permission');
-            break;
-          case TIMEOUT:
-            alert('geolocation timed out');
-            break;
-          case POSITION_UNAVAILABLE:
-            alert('Geolocation information is not available');
-            break;
-          default:
-            alert('unknown error');
-            break;
-        }
+    function onError(error) {
+      switch(error.code) {
+        case PERMISSION_DENIED:
+          alert('user denied permission');
+          break;
+        case TIMEOUT:
+          alert('geolocation timed out');
+          break;
+        case POSITION_UNAVAILABLE:
+          alert('Geolocation information is not available');
+          break;
+        default:
+          alert('unknown error');
+          break;
       }
+    }
 
     // check if browser supports HTML5 geolocation
     if(navigator.geolocation) {
@@ -30,8 +30,8 @@ function currentPosition() {
           enableHighAccuracy:true});
     }
 
-      let startLat;
-      let startLong;
+    let startLat;
+    let startLong;
     function onSuccess(position) {
       const currentLat = position.coords.latitude;
       const currentLong = position.coords.longitude;
@@ -64,29 +64,29 @@ function currentPosition() {
       });
 
 
-    var startlatlng = new google.maps.Geocoder();
-    startlatlng = {lat: startLat, lng: startLong};
+      var startlatlng = new google.maps.Geocoder();
+      startlatlng = {lat: startLat, lng: startLong};
 
 
-    var mapOptions = {
-      center: startlatlng,
-      zoom: 15,
-      zoomControl: false,
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false
-    }
+      var mapOptions = {
+        center: startlatlng,
+        zoom: 15,
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: false
+      }
 
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      var map = new google.maps.Map(document.getElementById('tripMap'), mapOptions);
 
-    // we need a marker on the current location of the user:
-    // (the marker will move as the user moves)
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
-    });
+      // we need a marker on the current location of the user:
+      // (the marker will move as the user moves)
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+      });
     }
   }
 }
