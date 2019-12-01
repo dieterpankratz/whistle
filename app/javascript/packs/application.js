@@ -1,5 +1,2 @@
 import "bootstrap";
-import { burgerSlide } from '../components/burger';
-
-burgerSlide();
-
+import '../components/burger';
