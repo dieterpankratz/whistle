@@ -13,8 +13,9 @@
 
   </head>
   <body style="background-color: white; position: relative;">
-    <%#= render 'shared/navbar' %>
-    <%= render 'shared/burger' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/burger' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
