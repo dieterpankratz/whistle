@@ -1,0 +1,25 @@
+<div class="burger-container">
+  <div class="burger">
+    <span class="span span1"></span>
+    <span class="span span2"></span>
+    <span class="span span3"></span>
+  </div>
+  <div>
+    <ul class="nav-links">
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Dashboard",dashboard_path, class: "link" %>
+        </li>
+        <li>
+          <%= link_to "New contact", "#", class: "link" %>
+        </li>
+        <li>
+          <%= link_to "Information", "#", class: "link" %>
+        </li>
+        <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

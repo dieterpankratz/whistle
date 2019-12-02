@@ -12,8 +12,10 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}", async: true, defer: true %>
 
   </head>
-  <body style="background-color: white">
-    <%= render 'shared/navbar' %>
+  <body style="background-color: white; position: relative;">
+    <% if user_signed_in? %>
+      <%= render 'shared/burger' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
