@@ -1,18 +1,9 @@
-function currentLocationToForm() {
-  window.addEventListener('DOMContentLoaded', (event) => {
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        const startLat = document.querySelector("#trip_start_lat");
-        const startLong = document.querySelector("#trip_start_long");
+function currentLocationToForm(latElement, longElement, position) {
+  const currentLat = position.coords.latitude;
+  const currentLong = position.coords.longitude;
 
-        const currentLat = position.coords.latitude;
-        const currentLong = position.coords.longitude;
-
-        startLat.value = currentLat;
-        startLong.value = currentLong;
-      });
-    }
-});
+  latElement.value = currentLat;
+  longElement.value = currentLong;
 }
 
 export { currentLocationToForm };
