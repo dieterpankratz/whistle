@@ -13,7 +13,7 @@ function currentPosition() {
       document.querySelector("#newMap").setAttribute("longitude", pos.coords.longitude);
       currentPositionMap();
   }
-
+  
   function onError() {
     console.log('getCurrentPosition error');
   }
@@ -66,26 +66,6 @@ function currentPositionMap() {
               map: newMap
             });
           };
-
-
-
-  var styles = {
-          default: null,
-          hide: [
-            {
-              featureType: 'poi.business',
-              stylers: [{visibility: 'off'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'labels.icon',
-              stylers: [{visibility: 'off'}]
-            }
-          ]
-  };
 }
-
-
-
 
 export { currentPosition };

@@ -1,0 +1,119 @@
+$background-color: white;
+$text-color: #43ABA5;
+$burger-size: 50px;
+$burger-space: 10px;
+
+.burger-container {
+  position: absolute;
+  width: $burger-size;
+  height: $burger-size;
+  top: $burger-space;
+  left: $burger-space;
+  z-index: 1;
+  background-color: #43ABA5;
+  border-radius: 50%;
+}
+
+.burger {
+  display: block;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+
+// lines & position
+.span {
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 60%;
+  border: 1.5px solid white;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.span1 {
+  top: 30%;
+}
+
+.span2 {
+  top: 50%;
+}
+
+.span3 {
+  top: 70%;
+}
+
+// is open -> action on the burger trigerred on click
+.is-open {
+  .span {
+    left: 10px;
+  }
+  .span1 {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .span2 {
+    display: none;
+  }
+  .span3 {
+     top: 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+// links
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  position: absolute;
+  padding: 0 15px 0 20px;
+  top: 8vh;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  transform:translateX(100px);
+  transition: transform 0.5s ease-in;
+  width: 240px;
+  opacity: 0;
+  background-color: $background-color;
+  border-radius: 3px;
+
+  li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px solid $text-color;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+}
+
+.nav-links .link {
+  color: $text-color;
+  text-decoration:none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-active{
+  transform: translateX(0%);
+  animation: navLinkFade 0.5s ease;
+  opacity: 1;
+}
+
+@keyframes navLinkFade{
+
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
