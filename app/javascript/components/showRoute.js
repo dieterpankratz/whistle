@@ -1,6 +1,9 @@
 
 import createMap from './createMap'
-import {addMarkersToMap} from './addMarkersToMap'
+import {addAMarker} from './addMarkersToMap'
+// import {addMarkersToMap} from './addMarkersToMap'
+
+
 let coordinatesArray = [];
 let destinationLat = document.querySelector("#end_lat");
 let destinationLong= document.querySelector("#end_long");
@@ -32,9 +35,12 @@ function showRoute(map) {
     zoom: 10
   }
 
-  // var tripMap = new google.maps.Map(document.getElementById("tripMap"), mapOptions)
-  const tripMap = createMap(map, mapOptions)
-  addMarkersToMap(coordinatesArray, tripMap)
+  const tripMap = createMap(map, mapOptions);
+  // addMarkersToMap(coordinatesArray, tripMap);
+  const aMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575305309/a_marker_womayg.png';
+  const bMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575305309/b_marker_gik9qj.png';
+  addAMarker(startingCoords, tripMap, aMarker);
+  addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
 
 }
