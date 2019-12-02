@@ -1,45 +1,80 @@
 .whistle{
-background-color: white;
+  background-color: white;
   padding: 40px;
   margin: 0px;
-color: #43ABA5;
-border: solid #43ABA5;
-  border-radius: 15px;
-  font-weight: bold;
+  color: #43ABA5;
+  border: solid 1px #43ABA5;
+  border-radius: 10px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 63px;
-  width: 100%;
+  bottom: 70px;
+  width: 45vh;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .safe{
-background-color: #43ABA5;
+  background-color: #43ABA5;
   padding: 15px;
   margin: 0px;
-color: white;
-  border-radius: 15px;
-  font-weight: bold;
+  color: white;
+  border-radius: 10px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 5px;
-  width: 100%;
+  bottom: 10px;
+  width: 45vh;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .share{
-background-color: #43ABA5;
+  background-color: #43ABA5;
   padding: 15px;
   margin: 0px;
-color: white;
-  border-radius: 15px;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  bottom: 63px;
+  width: 45vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.new_trip {
+  display: flex;
+  border-radius: 10px;
   font-weight: bold;
   position: absolute;
   z-index: 2;
   opacity: 1;
   bottom: 63px;
-  width: 100%;
-  text-align: center;
+  width: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.btn-primary {
+  background-color: #43ABA5;
+  border-color: #43ABA5;
+  height: 50px;
+
+}
+
+.form-control {
+  height: 50px;
 }
