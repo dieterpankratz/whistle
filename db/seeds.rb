@@ -40,7 +40,7 @@ alert_2 = Alert.create!(user_id: user_1.id, lat: 52.493835, long: 13.387999, tri
 puts 'Alerts created!'
 puts 'Creating responses...'
 user_1.responders.each do |responder|
-  Response.create(user: responder, alert: alert_1, lat: 52.537493, long: 13.397086)
+  Response.create(user: responder, alert: alert_1, lat: 52.529968, long: 13.400718)
 end
 puts 'Responses created!'
 
