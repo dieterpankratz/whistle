@@ -1,94 +1,91 @@
 function currentPosition() {
-  // suppose we want to get the location information continiously, so we use watchPosition.
-  // we need global variable to store the id returned by watchPosition method
-  var watchId, startLat, startLong;
-  var start = 1;
-  // I want to have the map as soon as the page loads:
-  window.onload = function() {
-     function onError(error) {
-        switch(error.code) {
-          case PERMISSION_DENIED:
-            alert('user denied permission');
-            break;
-          case TIMEOUT:
-            alert('geolocation timed out');
-            break;
-          case POSITION_UNAVAILABLE:
-            alert('Geolocation information is not available');
-            break;
-          default:
-            alert('unknown error');
-            break;
-        }
-      }
+  // we need an instance of geocoder class to get readable address out from
+  // lat and long (geocoder is a google service for converting between an address and a LatLng):
+  let startLat, startLong;
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  } else {
+    alert("Your browser doesn't support geolocation.");
+  }
 
-    // check if browser supports HTML5 geolocation
-    if(navigator.geolocation) {
-      watchId = navigator.geolocation.watchPosition(onSuccess, onError,
-        {maximumAge:60*1000,
-          timeout:5*60*1000,
-          enableHighAccuracy:true});
-    }
+  function onSuccess(pos) {
+      document.querySelector("#newMap").setAttribute("latitude", pos.coords.latitude);
+      document.querySelector("#newMap").setAttribute("longitude", pos.coords.longitude);
+      currentPositionMap();
+  }
 
-      let startLat;
-      let startLong;
-    function onSuccess(position) {
-      const currentLat = position.coords.latitude;
-      const currentLong = position.coords.longitude;
-
-      if (start == 1) {
-        startLat = currentLat;
-        startLong = currentLong;
-        start = 0;
-      }
-
-      // we need an instance of geocoder class to get readable address out from
-      // lat and long (geocoder is a google service for converting between an address and a LatLng):
-      var geocoder = new google.maps.Geocoder();
-      // a LatLng (class) is a point in geographical coordinates: latitude and longitude:
-      const latlong = new google.maps.LatLng
-      // var latlong = new google.maps.LatLng(currentLat, currentLong);
-      const latlng = {lat: currentLat, lng: currentLong};
-      // geocode(request, callback) method:
-      geocoder.geocode({'location': latlng}, function(results, status) {
-        console.log({status})
-        if (status === 'OK') {
-          if (results[0]) {
-            document.getElementById('address').innerHTML = results[0].formatted_address;
-          } else {
-            window.alert('No results found');
-          }
-        } else {
-          window.alert('Geocoder failed due to: ' + status);
-        }
-      });
-
-
-    var startlatlng = new google.maps.Geocoder();
-    startlatlng = {lat: startLat, lng: startLong};
-
-
-    var mapOptions = {
-      center: startlatlng,
-      zoom: 15,
-      zoomControl: false,
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false
-    }
-
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    // we need a marker on the current location of the user:
-    // (the marker will move as the user moves)
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
-    });
-    }
+  function onError() {
+    console.log('getCurrentPosition error');
   }
 }
+
+function currentPositionMap() {
+  const currentLat = document.querySelector("#newMap").getAttribute("latitude");
+  const  currentLong = document.querySelector("#newMap").getAttribute("longitude");
+  const currentLatLong = new google.maps.LatLng(currentLat, currentLong);
+
+  const newMap = new google.maps.Map(document.querySelector("#newMap"), {
+    zoom: 16,
+    center: currentLatLong,
+    disableDefaultUI: true
+  });
+
+  const currPushPin = 'https://res.cloudinary.com/pankratz117/image/upload/v1575142232/current_position_marker_e4jnlm.png'
+  const currentMarker = new google.maps.Marker({
+    position: currentLatLong,
+    map: newMap,
+    icon: currPushPin
+  });
+
+  const shelterLogo = 'https://res.cloudinary.com/pankratz117/image/upload/v1575277537/establishement_bdwjlo.png';
+
+  const establishments = [
+    {
+      position: new google.maps.LatLng(52.507550, 13.390590),
+      type: 'shelterLogo'
+    },
+    {
+      position: new google.maps.LatLng(52.506710, 13.393170),
+      type: 'shelterLogo'
+    },
+    {
+      position: new google.maps.LatLng(52.508100, 13.392410),
+      type: 'shelterLogo'
+    },
+    {
+      position: new google.maps.LatLng(52.507210, 13.390210),
+      type: 'shelterLogo'
+    }
+  ];
+
+  // Create markers.
+  for (let i = 0; i < establishments.length; i++) {
+    const marker = new google.maps.Marker({
+      position: establishments[i].position,
+              icon: shelterLogo,
+              map: newMap
+            });
+          };
+
+
+
+  var styles = {
+          default: null,
+          hide: [
+            {
+              featureType: 'poi.business',
+              stylers: [{visibility: 'off'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'labels.icon',
+              stylers: [{visibility: 'off'}]
+            }
+          ]
+  };
+}
+
+
+
 
 export { currentPosition };
