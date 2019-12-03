@@ -43,11 +43,11 @@ function showRoute(map) {
   const shelters = [
     {
       lat: 52.527514,
-      lng: 13.398103
+      long: 13.398103
     },
     {
       lat: 52.531556,
-      lng: 13.388505
+      long: 13.388505
     },
     {
       lat: 52.533081,
@@ -55,11 +55,11 @@ function showRoute(map) {
     },
     {
       lat: 52.530068,
-      lng: 13.400792
+      long: 13.400792
     },
     {
       lat: 52.531662,
-      lng: 13.394106
+      long: 13.394106
     }
   ];
 
