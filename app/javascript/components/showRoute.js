@@ -37,8 +37,6 @@ function showRoute(map) {
 
   const tripMap = createMap(map, mapOptions);
 
-
-
   const shelterLogo = 'https://res.cloudinary.com/pankratz117/image/upload/v1575277537/establishement_bdwjlo.png';
 
   const shelters = [
