@@ -7,13 +7,12 @@
           <%= f.input :end_point, placeholder: "Destination", html: {id: "end_point"}, label: false %>
           <%= f.input :start_lat, :as => :hidden, html: {id: "start_lat"}  %>
           <%= f.input :start_long, :as => :hidden, html: {id: "start_long"}  %>
-          <%= f.submit "Go !", class: "btn btn-primary" %>
+          <%= f.submit "Go!", class:"btn btn-primary" %>
         <% end %>
   </div>
 </div>
 
 <%= content_for :after_js do  %>
-  <%= javascript_pack_tag "map" %>
   <%= javascript_pack_tag 'trips_new' %>
 <% end %>
 
