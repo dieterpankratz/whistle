@@ -1,3 +1,7 @@
+.a {
+  color: #085F63;
+}
+
 .whistle{
   background-color: #085F63;
   padding: 40px;
@@ -34,7 +38,7 @@
   right: 0;
 }
 
-.share{
+.share {
   background-color: #085F63;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 35px;
@@ -71,7 +75,11 @@
   background-color: #085F63;
   border-color: #085F63;
   height: 50px;
+}
 
+.btn:active {
+  background-color: #085F63;
+  border-color: #085F63;
 }
 
 .form-control {

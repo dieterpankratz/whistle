@@ -1,8 +1,8 @@
 function autocomplete() {
     var destination = document.getElementById('trip_end_point');
     var defaultBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(52.520008, 13.404954),
-        new google.maps.LatLng(52.520008, 13.404954),
+        new google.maps.LatLng(52.435404, 13.237931),
+        new google.maps.LatLng(52.647595, 13.500343),
         );
     const options = {
       types: [ 'geocode' ],
