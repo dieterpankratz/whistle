@@ -12,7 +12,6 @@ const createMap = (mapElement, options = {}) => {
     fullscreenControl: false,
   }
   const newMap = new google.maps.Map(mapElement, mapOptions);
-
   return newMap
 }
 
