@@ -1,2 +1,2 @@
-import { currentPosition } from '../components/currentPosition';
-currentPosition();
+// import { currentPosition } from '../components/currentPosition';
+// currentPosition();
