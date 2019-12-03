@@ -1,4 +1,4 @@
-class AlertsController < ApplicationController
+-class AlertsController < ApplicationController
   def show
     set_alert
     authorize @alert
