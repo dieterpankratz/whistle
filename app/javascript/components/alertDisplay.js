@@ -3,7 +3,7 @@ import {addMarkersToMap} from './addMarkersToMap'
 import {drawPath} from './showRoute'
 import createMap from './createMap'
 import {tripCoordinates} from './tripCoordinates'
-import {getCurrentCoords, addUserPosition} from './currentPosition'
+import {getCurrentCoords, addUserPosition, addWhistlePosition} from './currentPosition'
 const alertDisplay = async (map) => {
   const points = tripCoordinates();
 
@@ -40,7 +40,7 @@ const alertDisplay = async (map) => {
     const coordsPromise = new Promise(getCurrentCoords);
     const coords =  await coordsPromise;
     console.log({coords})
-    addUserPosition(tripMap, coords.lat, coords.lng)
+    addWhistlePosition(tripMap, 52.532023, 13.40112)
 }
 
 

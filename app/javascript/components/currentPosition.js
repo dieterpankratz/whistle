@@ -26,13 +26,28 @@ const addUserPosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
 
-  const currPushPin = 'https://res.cloudinary.com/pankratz117/image/upload/v1575142232/current_position_marker_e4jnlm.png'
+  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575394190/Group_2_zdizst.png'
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,
     icon: currPushPin,
-    animation:google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP
   });
 }
 
-export { getCurrentCoords, addUserPosition };
+
+const addWhistlePosition = (map, latitude, longitude) => {
+  const currentLatLong = new google.maps.LatLng(latitude, longitude);
+
+
+  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575394190/Group_2_zdizst.png'
+  const currentMarker = new google.maps.Marker({
+    position: currentLatLong,
+    map: map,
+    icon: currPushPin,
+    animation: google.maps.Animation.BOUNCE
+  });
+}
+
+
+export { getCurrentCoords, addUserPosition, addWhistlePosition };
