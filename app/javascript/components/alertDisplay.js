@@ -40,7 +40,7 @@ const alertDisplay = async (map) => {
     const coordsPromise = new Promise(getCurrentCoords);
     const coords =  await coordsPromise;
     console.log({coords})
-    addUserPosition(tripMap, 52.5172949, coords.lng)
+    addUserPosition(tripMap, coords.lat, coords.lng)
 }
 
 
