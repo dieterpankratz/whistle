@@ -1,4 +1,4 @@
-import {addMarkersToMap} from './addMarkersToMap'
+import {addAMarker} from './addMarkersToMap'
 import {drawPath} from './showRoute'
 import createMap from './createMap'
 const alertDisplay = (map) => {
@@ -33,7 +33,10 @@ const alertDisplay = (map) => {
   }
   const tripMap =  createMap(map, mapOptions)
 
-  addMarkersToMap(points, tripMap)
+  const aMarker = "https:res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361660/a_mark_i4ty4x.png";
+  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361874/b_mark_lc2rad.png";
+  addAMarker(startingCoords, tripMap, aMarker);
+  addAMarker(destinationCoords, tripMap, bMarker);
 
   drawPath(tripMap, points);
 }
