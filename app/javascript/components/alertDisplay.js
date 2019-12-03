@@ -34,8 +34,8 @@ const alertDisplay = (map) => {
   }
   const tripMap =  createMap(map, mapOptions)
 
-  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361660/a_mark_i4ty4x.png";
-  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361874/b_mark_lc2rad.png";
+  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/a_mark_1_rcpfya.png";
+  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/b_mark_1_km2ctd.png";
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
 
@@ -45,7 +45,7 @@ const alertDisplay = (map) => {
   const responseMap = document.getElementById('tripMap');
   const responderMarkers = JSON.parse(responseMap.dataset.markers);
   // console.log(responderMarkers);
-  const helperMarker = 'https://res.cloudinary.com/pankratz117/image/upload/v1575369256/blue_helper_v1_ale3uk.png';
+  const helperMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_50/v1575383219/helper_1_gg4gvn.png';
   console.log({helperMarker})
   addMarkersToMap(responderMarkers, tripMap, helperMarker);
 
