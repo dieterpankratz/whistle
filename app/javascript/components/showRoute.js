@@ -58,7 +58,7 @@ function drawPath(map, coordinates) {
   const createdMap = createMap(map, mapOptions)
   directionsRenderer.setMap(createdMap);
 
-  var poly = new google.maps.Polyline({strokeColor:"#085F63", strokeWeight:4})
+  var poly = new google.maps.Polyline({strokeColor:"#43ABA5", strokeWeight:4})
   var request = {
     origin: new google.maps.LatLng(coordinates[0].lat, coordinates[0].long),
     destination: new google.maps.LatLng(coordinates[1].lat, coordinates[1].long),
