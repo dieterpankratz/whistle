@@ -1,3 +1,4 @@
+import {addAMarker} from './addMarkersToMap'
 import {addMarkersToMap} from './addMarkersToMap'
 import {drawPath} from './showRoute'
 import createMap from './createMap'
@@ -33,9 +34,21 @@ const alertDisplay = (map) => {
   }
   const tripMap =  createMap(map, mapOptions)
 
-  addMarkersToMap(points, tripMap)
+  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361660/a_mark_i4ty4x.png";
+  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361874/b_mark_lc2rad.png";
+  addAMarker(startingCoords, tripMap, aMarker);
+  addAMarker(destinationCoords, tripMap, bMarker);
 
   drawPath(tripMap, points);
+
+  // 1. get coords from helpers (from alerts#show)
+  const responseMap = document.getElementById('tripMap');
+  const responderMarkers = JSON.parse(responseMap.dataset.markers);
+  // console.log(responderMarkers);
+  const helperMarker = 'https://res.cloudinary.com/pankratz117/image/upload/v1575369256/blue_helper_v1_ale3uk.png';
+  console.log({helperMarker})
+  addMarkersToMap(responderMarkers, tripMap, helperMarker);
+
 }
 
 

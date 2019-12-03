@@ -7,7 +7,7 @@ export const addMarkersToMap = (coordinates, map, icon = currPushPin) => {
       const marker =  new google.maps.Marker({
         position: new google.maps.LatLng(coordinate.lat, coordinate.long),
         map: map,
-        icon: currPushPin
+        icon: icon
       });
       latlngbounds.extend(marker.position)
     })

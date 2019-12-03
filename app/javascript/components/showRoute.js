@@ -71,8 +71,7 @@ function showRoute(map) {
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
-
-}
+ }
 
 
 function drawPath(map, coordinates) {
@@ -106,7 +105,6 @@ function drawPath(map, coordinates) {
   });
 
 }
-
 
 export {drawPath}
 export { showRoute };

@@ -34,6 +34,8 @@ function addUserPosition(map) {
     center: currentLatLong,
     disableDefaultUI: true,
   }
+
+
   const createdMap = createMap(map, mapOptions);
 
 // Add User Map Marker
