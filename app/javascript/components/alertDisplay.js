@@ -18,7 +18,7 @@ const alertDisplay = async (map) => {
   const tripMap =  createMap(map, mapOptions)
 
   // starting, ending positions
-  const aMarker = "https:res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361660/a_mark_i4ty4x.png";
+  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361660/a_mark_i4ty4x.png";
   const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575361874/b_mark_lc2rad.png";
   addAMarker(points[0], tripMap, aMarker);
   addAMarker(points[1], tripMap, bMarker);
