@@ -22,7 +22,8 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "whistle"
       @alert.kind = "whistle"
       # set lat and lng
-      Response.create!(user: User.find(6), lat: 52.506470, long: 13.390330, alert: @alert)
+      Response.create!(user: User.find(6), lat: 52.535172, long: 13.405950, alert: @alert)
+      Response.create!(user: User.find(7), lat: 52.529119, long: 13.395488, alert: @alert)
       # Response.create(lat: 34.32, long: 15.23, alert: @alert)
     elsif params[:kind] == "safe"
       @alert.kind = "safe"

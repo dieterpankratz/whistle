@@ -30,7 +30,8 @@ const addUserPosition = (map, latitude, longitude) => {
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,
-    icon: currPushPin
+    icon: currPushPin,
+    animation:google.maps.Animation.DROP
   });
 }
 
