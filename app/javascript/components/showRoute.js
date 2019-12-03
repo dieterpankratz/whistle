@@ -67,8 +67,8 @@ function showRoute(map) {
 
   addMarkersToMap(shelters, tripMap, shelterLogo)
 
-  const aMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575305309/a_marker_womayg.png';
-  const bMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575305309/b_marker_gik9qj.png';
+  const aMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/a_mark_1_rcpfya.png';
+  const bMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/b_mark_1_km2ctd.png';
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
