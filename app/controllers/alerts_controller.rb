@@ -1,6 +1,12 @@
 class AlertsController < ApplicationController
   def show
     set_alert
+    @markers = @alert.responses.map do |response|
+      {
+        lat: response.lat,
+        long: response.long
+      }
+    end
     authorize @alert
   end
 
@@ -16,6 +22,8 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "whistle"
       @alert.kind = "whistle"
       # set lat and lng
+      Response.create!(user: User.find(6), lat: 52.506470, long: 13.390330, alert: @alert)
+      # Response.create(lat: 34.32, long: 15.23, alert: @alert)
     elsif params[:kind] == "safe"
       @alert.kind = "safe"
     end
