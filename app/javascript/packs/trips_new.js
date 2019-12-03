@@ -8,3 +8,4 @@ console.log(mapDiv)
 if (mapDiv) {
   currentPosition(mapDiv);
 }
+

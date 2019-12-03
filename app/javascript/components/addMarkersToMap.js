@@ -27,3 +27,4 @@ export const addAMarker = (coordinate, map, icon) => {
 
     map.fitBounds(latlngbounds)
 }
+
