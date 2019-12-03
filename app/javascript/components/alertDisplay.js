@@ -1,4 +1,5 @@
 import {addAMarker} from './addMarkersToMap'
+import {addMarkersToMap} from './addMarkersToMap'
 import {drawPath} from './showRoute'
 import createMap from './createMap'
 const alertDisplay = (map) => {
