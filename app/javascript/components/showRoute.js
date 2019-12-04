@@ -1,7 +1,7 @@
 
 import createMap from './createMap'
 import {addAMarker} from './addMarkersToMap'
-// import {addMarkersToMap} from './addMarkersToMap'
+import {addMarkersToMap} from './addMarkersToMap'
 
 
 let coordinatesArray = [];
@@ -36,14 +36,44 @@ function showRoute(map) {
   }
 
   const tripMap = createMap(map, mapOptions);
+
   // addMarkersToMap(coordinatesArray, tripMap);
+
+  const shelterLogo = 'https://res.cloudinary.com/pankratz117/image/upload/v1575277537/establishement_bdwjlo.png';
+
+  const shelters = [
+    {
+      lat: 52.527514,
+      long: 13.398103
+    },
+    {
+      lat: 52.531556,
+      long: 13.388505
+    },
+    {
+      lat: 52.533081,
+      long: 13.399919
+    },
+    {
+      lat: 52.530068,
+      long: 13.400792
+    },
+    {
+      lat: 52.531662,
+      long: 13.394106
+    }
+  ];
+
+
+  addMarkersToMap(shelters, tripMap, shelterLogo)
+
   const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/a-marker_snmd0w.png";
   const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/b-marker_tdfu6g.png";
+  
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
-
-}
+ }
 
 
 function drawPath(map, coordinates) {
