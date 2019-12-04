@@ -6,10 +6,10 @@ Response.destroy_all
 User.destroy_all
 puts 'Creating users...'
 user_1 = User.create!(name: "Chloé", email: "user_1@example.com", password: "123456", username: "Baba", phone_number: "+4915786608080")
-user_2 = User.create!(name: "Morgane", email: "user_2@example.com", password: "123456", username: "Momo", phone_number: "+4917659143289")
+user_2 = User.create!(name: "Lyndsey", email: "user_5@example.com", password: "123456", username: "Lyn", phone_number: "+4915257607967")
 user_3 = User.create!(name: "Thomas", email: "user_3@example.com", password: "123456", username: "Tomtom")
 user_4 = User.create!(name: "Dieter", email: "user_4@example.com", password: "123456", username: "Didi")
-user_5 = User.create!(name: "Lyndsey", email: "user_5@example.com", password: "123456", username: "Lyn")
+user_5 = User.create!(name: "Morgane", email: "user_2@example.com", password: "123456", username: "Momo")
 user_6 = User.create!(name: "Dimitri", email: "user_6@example.com", password: "123456", username: "Dimi")
 user_7 = User.create!(name: "Isabelle", email: "user_7@example.com", password: "123456", username: "Isa")
 user_8 = User.create!(name: "Santiago", email: "user_8@example.com", password: "123456", username: "Santi")
