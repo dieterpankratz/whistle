@@ -19,7 +19,7 @@ class SendTwilioMessage
 
   def send_message(kind, to, responder_name)
     if kind == 'share'
-      message = "Hey #{responder_name}, I am using Whistle, here is my itinary: https://www.whistle-app.com/trips/15"
+      message = "Hey #{responder_name}, I'm using Whistle and this is where I'm heading : https://www.whistle-app.com/trips/15"
     elsif kind == 'whistle'
       message = "URGENT! #{responder_name} I NEED YOUR HELP, here is my current location: https://www.whistle-app.com/alerts/15"
     else
