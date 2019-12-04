@@ -37,8 +37,8 @@ function showRoute(map) {
 
   const tripMap = createMap(map, mapOptions);
   // addMarkersToMap(coordinatesArray, tripMap);
-  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/a_mark_1_rcpfya.png";
-  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575383219/b_mark_1_km2ctd.png";
+  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/a-marker_snmd0w.png";
+  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/b-marker_tdfu6g.png";
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
