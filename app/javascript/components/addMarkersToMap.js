@@ -28,3 +28,4 @@ export const addAMarker = (coordinate, map, icon, animation = google.maps.Animat
 
     map.fitBounds(latlngbounds)
 }
+
