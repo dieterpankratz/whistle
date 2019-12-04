@@ -11,7 +11,7 @@
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 75px;
+  bottom: 80px;
   width: 80%;
   text-align: center;
   margin-left: auto;
@@ -20,6 +20,12 @@
   right: 0;
   font-size: 22px;
   letter-spacing: 1px;
+}
+
+.whistle:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .safe{
@@ -32,7 +38,7 @@
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 15px;
+  bottom: 20px;
   width: 80%;
   text-align: center;
   margin-left: auto;
@@ -41,6 +47,12 @@
   right: 0;
   font-size: 22px;
   letter-spacing: 1px;
+}
+
+.safe:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .share {
@@ -65,8 +77,10 @@
 
 }
 
-.share:active {
-  color: grey;
+.share:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .new_trip {

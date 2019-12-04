@@ -19,8 +19,9 @@ const alertDisplay = async (map) => {
   }
   const tripMap =  createMap(map, mapOptions)
 
-    const shelterLogo = 'https://res.cloudinary.com/pankratz117/image/upload/v1575277537/establishement_bdwjlo.png';
-  // add coordinates of helpers to map
+
+ const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575468104/shelter_5_sthdlw.png';
+
 
   const shelters = [
     {

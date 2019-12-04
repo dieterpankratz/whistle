@@ -39,7 +39,7 @@ function showRoute(map) {
 
   // addMarkersToMap(coordinatesArray, tripMap);
 
-  const shelterLogo = 'https://res.cloudinary.com/pankratz117/image/upload/v1575277537/establishement_bdwjlo.png';
+  const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575468104/shelter_5_sthdlw.png';
 
   const shelters = [
     {

@@ -3,7 +3,7 @@ class SendTwilioMessage
     @alert = alert
     @account_sid = ENV['TWILIO_ACCOUNT_SID']
     @auth_token = ENV['TWILIO_TOKEN']
-    @service_number = "+15418030196" # From Twilio
+    @service_number = "+12029182233" # From Twilio
     @client = Twilio::REST::Client.new(@account_sid, @auth_token)
   end
 
