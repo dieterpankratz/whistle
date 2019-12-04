@@ -22,6 +22,8 @@ const getCurrentCoords = (resolve, reject) => {
 
 }
 
+
+
 const addUserPosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
