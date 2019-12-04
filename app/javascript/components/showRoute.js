@@ -32,7 +32,7 @@ function showRoute(map) {
   const mapOptions = {
     // LatLng class representing a pair of latitude and longitude coordinates, stored as degrees.
     center: new google.maps.LatLng(coordinatesArray[0].lat,coordinatesArray[0].long),
-    zoom: 15,
+    zoom: 15
   }
 
   const tripMap = createMap(map, mapOptions);

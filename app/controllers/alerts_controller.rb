@@ -28,10 +28,12 @@ class AlertsController < ApplicationController
     elsif params[:kind] == "safe"
       @alert.kind = "safe"
     end
+    @alert.save
+    # if @alert.save
+    #   redirect_to alert_path(@alert)
 
-    if @alert.save
-      SendTwilioMessage.new(@alert).send_alert
-    end
+    #   #SendTwilioMessage.new(@alert).send_alert
+    # end
     if @alert.kind == "safe"
       redirect_to new_trip_path
     else
