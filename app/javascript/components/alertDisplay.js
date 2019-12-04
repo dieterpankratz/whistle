@@ -37,10 +37,13 @@ const alertDisplay = async (map) => {
 
 
   // add user's current Position to map
+  const alertKind = document.getElementById('alert_kind').innerHTML;
+  if (alertKind === "whistle") {
     const coordsPromise = new Promise(getCurrentCoords);
     const coords =  await coordsPromise;
     console.log({coords})
     addWhistlePosition(tripMap, 52.532023, 13.40112)
+  }
 }
 
 
