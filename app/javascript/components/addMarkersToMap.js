@@ -15,6 +15,22 @@ export const addMarkersToMap = (coordinates, map, icon = currPushPin) => {
     map.fitBounds(latlngbounds)
 }
 
+export const addHelperToMap = (coordinate, map, icon = currPushPin, label) => {
+   var latlngbounds = new google.maps.LatLngBounds();
+
+
+      const marker =  new google.maps.Marker({
+        position: new google.maps.LatLng(coordinate.lat, coordinate.long),
+        map: map,
+        icon: icon,
+        label: label
+      });
+      latlngbounds.extend(marker.position);
+
+
+    map.fitBounds(latlngbounds)
+}
+
 export const addAMarker = (coordinate, map, icon, animation = google.maps.Animation) => {
    var latlngbounds = new google.maps.LatLngBounds();
 

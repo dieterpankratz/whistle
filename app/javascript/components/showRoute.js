@@ -81,7 +81,7 @@ function drawPath(map, coordinates) {
   var directionsRenderer = new google.maps.DirectionsRenderer();
   var mapOptions = {
     center: new google.maps.LatLng(coordinates[0].lat,coordinates[0].long),
-    zoom: 15,
+    zoom: 15
   }
 
   // map generated from createMap.js
