@@ -22,6 +22,8 @@ const getCurrentCoords = (resolve, reject) => {
 
 }
 
+
+
 const addUserPosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
@@ -40,7 +42,7 @@ const addWhistlePosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
 
-  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575394190/Group_2_zdizst.png'
+  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/whistle_mbzpwr.png'
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,

@@ -1,27 +1,36 @@
 .a {
-  color: #085F63;
+  color: #0a7176;
 }
 
 .whistle{
-  background-color: #085F63;
-  padding: 40px;
-  margin: 0px;
+  background-color: #0a7176;
+  padding: 15px;
+  margin: 5px;
   color: white;
   border-radius: 5px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 70px;
+  bottom: 80px;
   width: 80%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.whistle:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .safe{
-  background-color: #085F63;
+  background-color: #0a7176;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   padding: 15px;
   margin: 0px;
   color: white;
@@ -29,37 +38,49 @@
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 10px;
+  bottom: 20px;
   width: 80%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.safe:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .share {
-  background-color: #085F63;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 35px;
+  background-color: #0a7176;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 30px;
   margin: 5px;
   color: white;
   border-radius: 5px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 63px;
+  bottom: 20px;
   width: 80%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
 
 }
 
-.share:active {
-  color: grey;
+.share:focus {
+  color: #0a7176;
+  background-color: white;
+  text-decoration: none;
 }
 
 .new_trip {
@@ -76,14 +97,14 @@
 }
 
 .btn-primary {
-  background-color: #085F63;
-  border-color: #085F63;
+  background-color: #0a7176;
+  border-color: #0a7176;
   height: 50px;
 }
 
 .btn:active {
-  background-color: #085F63;
-  border-color: #085F63;
+  background-color: #0a7176;
+  border-color: #0a7176;
 }
 
 .form-control {
