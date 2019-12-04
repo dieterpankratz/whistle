@@ -61,7 +61,7 @@ const alertDisplay = async (map) => {
 
   // add coordinates of helpers to map
   const helperMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_50/v1575383219/helper_1_gg4gvn.png';
-  addMarkersToMap(responderMarkers, tripMap, helperMarker);
+  addMarkersLabelsToMap(responderMarkers, tripMap, helperMarker, label);
 
 
 
