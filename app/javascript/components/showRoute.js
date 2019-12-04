@@ -69,7 +69,7 @@ function showRoute(map) {
 
   const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/a-marker_snmd0w.png";
   const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/b-marker_tdfu6g.png";
-  
+
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
   drawPath(tripMap, coordinatesArray);
@@ -81,7 +81,7 @@ function drawPath(map, coordinates) {
   var directionsRenderer = new google.maps.DirectionsRenderer();
   var mapOptions = {
     center: new google.maps.LatLng(coordinates[0].lat,coordinates[0].long),
-    zoom: 15,
+    zoom: 15
   }
 
   // map generated from createMap.js

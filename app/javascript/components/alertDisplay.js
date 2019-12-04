@@ -1,9 +1,11 @@
 import {addAMarker} from './addMarkersToMap'
 import {addMarkersToMap} from './addMarkersToMap'
+import {addHelperToMap} from './addMarkersToMap'
 import {drawPath} from './showRoute'
 import createMap from './createMap'
 import {tripCoordinates} from './tripCoordinates'
 import {getCurrentCoords, addUserPosition, addWhistlePosition} from './currentPosition'
+import { getDurationToHelpersPosition } from './getDurationToHelpersPosition'
 const alertDisplay = async (map) => {
   const points = tripCoordinates();
 
@@ -59,9 +61,19 @@ const alertDisplay = async (map) => {
   const responseMap = document.getElementById('tripMap');
   const responderMarkers = JSON.parse(responseMap.dataset.markers);
 
+  // get the duration from helper:
+  let durationHelper1 = await getDurationToHelpersPosition({lat: 52.532023, long: 13.40112}, {lat: 52.535172, long: 13.405950});
+  let durationHelper2 = await getDurationToHelpersPosition({lat: 52.532023, long: 13.40112}, {lat: 52.529119, long: 13.395488});
+  const durationString1 = Math.round((durationHelper1/60)).toString() + " Min";
+  const durationString2 = Math.round((durationHelper2/60)).toString() + " Min";
+  console.log(durationString1);
+  console.log(durationString2);
+
   // add coordinates of helpers to map
   const helperMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_50/v1575452323/helper_pfrd6b.png';
-  addMarkersToMap(responderMarkers, tripMap, helperMarker);
+  addHelperToMap(responderMarkers[0], tripMap, helperMarker, durationString1);
+  addHelperToMap(responderMarkers[1], tripMap, helperMarker, durationString2);
+
 
 
 
