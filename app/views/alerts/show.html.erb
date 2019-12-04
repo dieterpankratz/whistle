@@ -7,6 +7,7 @@
     <p id="end_long" ><%= @alert.trip.end_long %></p>
     <p id="current_lat" ></p>
     <p id="current_long" ></p>
+    <p id="alert_kind"><%= @alert.kind %></p>
   </div>
   <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post, class: "whistle" %>
   <%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post, class: "safe" %>
