@@ -9,4 +9,5 @@ const openNav = () => {
 
 }
 
-openNav();
+export { openNav }
+

@@ -6,6 +6,7 @@ import {createMap} from './createMap'
 import {tripCoordinates} from './tripCoordinates'
 import {getCurrentCoords, addUserPosition, addWhistlePosition} from './currentPosition'
 import { getDurationToHelpersPosition } from './getDurationToHelpersPosition'
+
 const alertDisplay = async (map) => {
   const points = tripCoordinates();
 
@@ -63,9 +64,6 @@ const alertDisplay = async (map) => {
 
   }
 
-
-
-
   // starting, ending positions
   const aMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539619/A2_1_esqi8d.svg";
   const bMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539622/B2_1_hphvjs.svg";
@@ -74,10 +72,6 @@ const alertDisplay = async (map) => {
 
   // draw path between starting and ending
   drawPath(tripMap, points);
-
-
-
-
 
   // add user's current Position to map
   const alertKind = document.getElementById('alert_kind').innerHTML;
@@ -88,9 +82,7 @@ const alertDisplay = async (map) => {
     addWhistlePosition(tripMap, 52.532023, 13.40112)
   }
 
-
 }
-
 
 
 export { alertDisplay };

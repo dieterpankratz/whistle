@@ -1,5 +1,5 @@
 <div>
-  <div class= "map" id="tripMap" style="width: 100%; height: 100vh;"></div>
+  <div class="map" id="tripMap" style="width: 100%; height: 100vh;"></div>
   <div hidden="true">
     <p id="start_lat" ><%= @trip.start_lat %></p>
     <p id="start_long" ><%= @trip.start_long %></p>
@@ -7,7 +7,9 @@
     <p id="end_long" ><%= @trip.end_long %></p>
   </div>
   <div>
-  <%= link_to "Share my trip", trip_alerts_path(@trip, kind: "share"), method: :post, class: "share" %>
+  <%= form_for(:alert, url: trip_alerts_path(@trip, kind: "share"),html: { class: "show-trip-form" }) do |f| %>
+     <%= f.submit "Share my trip", class: 'share' %>
+   <% end %>
   </div>
 </div>
 
