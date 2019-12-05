@@ -29,21 +29,5 @@ export const addAMarker = (coordinate, map, icon, animation = google.maps.Animat
     map.fitBounds(latlngbounds)
 }
 
-export const addMarkersLabelsToMap = (coordinates, map, icon = currPushPin, label = '12min') => {
-   var latlngbounds = new google.maps.LatLngBounds();
-
-    coordinates.forEach(coordinate => {
-      const marker =  new google.maps.Marker({
-        position: new google.maps.LatLng(coordinate.lat, coordinate.long),
-        map: map,
-        icon: icon,
-        label: label
-      });
-      latlngbounds.extend(marker.position)
-    })
-
-    map.fitBounds(latlngbounds)
-}
-
 
 
