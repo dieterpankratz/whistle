@@ -1,5 +1,5 @@
 
-import createMap from './createMap'
+import {createMap} from './createMap'
 import {addAMarker} from './addMarkersToMap'
 import {addMarkersToMap} from './addMarkersToMap'
 
