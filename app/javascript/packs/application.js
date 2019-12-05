@@ -12,11 +12,6 @@ import Swal from 'sweetalert2';
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-
-})
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
   // BELOW: BURGER MENU
@@ -95,74 +90,69 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
+  // BELOW: ALERT FLASH CODE
+  const showTripForm = document.querySelector('.show-trip-form');
+  if(showTripForm) {
+    showTripForm.addEventListener('submit', event => {
+      event.preventDefault();
+       Swal.fire({
+          position: 'center',
+          title: 'Itinerary shared with your friends !',
+          showConfirmButton: false,
+          height: 500,
+          padding: 100,
+          timer: 1500
+      })
+       setTimeout(() => {
+        showTripForm.submit();
+
+       }, 1500)
+    });
+
+  }
+
+  const alertWhistleForm = document.querySelector('.alert-whistle-form');
+  if(alertWhistleForm) {
+    alertWhistleForm.addEventListener('submit', event => {
+      event.preventDefault();
+       Swal.fire({
+          position: 'center',
+          title: 'Looking for friends nearby !',
+          showConfirmButton: false,
+          height: 500,
+          padding: 100,
+          timer: 2000
+      })
+       setTimeout(() => {
+        alertWhistleForm.submit();
+
+       }, 2000)
+    });
+  }
+
+  const safeForm = document.querySelector('.safe-form');
+  if(safeForm) {
+    safeForm.addEventListener('submit', event => {
+      event.preventDefault();
+       Swal.fire({
+          position: 'center',
+          title: "Happy that you're safe!",
+          showConfirmButton: false,
+          height: 500,
+          padding: 100,
+          timer: 1500
+      })
+       setTimeout(() => {
+        safeForm.submit();
+
+       }, 1500)
+    });
+  }
+
+
+
 })
 
-
-
-// alert show
-
-
-
-
-
-
-const showTripForm = document.querySelector('.show-trip-form');
-if(showTripForm) {
-  showTripForm.addEventListener('submit', event => {
-    event.preventDefault();
-     Swal.fire({
-        position: 'center',
-        title: 'Itinerary shared with your friends !',
-        showConfirmButton: false,
-        height: 500,
-        padding: 100,
-        timer: 1500
-    })
-     setTimeout(() => {
-      showTripForm.submit();
-
-     }, 1500)
-  });
-
-}
-
-const alertWhistleForm = document.querySelector('.alert-whistle-form');
-if(alertWhistleForm) {
-  alertWhistleForm.addEventListener('submit', event => {
-    event.preventDefault();
-     Swal.fire({
-        position: 'center',
-        title: 'Looking for friends nearby !',
-        showConfirmButton: false,
-        height: 500,
-        padding: 100,
-        timer: 2000
-    })
-     setTimeout(() => {
-      alertWhistleForm.submit();
-
-     }, 2000)
-  });
-}
-
-const safeForm = document.querySelector('.safe-form');
-if(safeForm) {
-  safeForm.addEventListener('submit', event => {
-    event.preventDefault();
-     Swal.fire({
-        position: 'center',
-        title: "Happy that you're safe!",
-        showConfirmButton: false,
-        height: 500,
-        padding: 100,
-        timer: 1500
-    })
-     setTimeout(() => {
-      safeForm.submit();
-
-     }, 1500)
-  });
-}
 
 
 
