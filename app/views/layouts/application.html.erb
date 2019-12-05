@@ -16,7 +16,6 @@
     <!-- <meta name="GOOGLE_API_SERVER_KEY" content="<%#= ENV['GOOGLE_API_SERVER_KEY'] %>"> -->
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}"%>
     <%= javascript_pack_tag 'application', async: true, defer: true %>
-
   </head>
   <body style="background-color: white; position: relative;">
     <% if user_signed_in? %>
@@ -26,6 +25,8 @@
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
+    <!-- <script src="sweetalert2.min.js"></script> -->
+
 
   </body>
 </html>

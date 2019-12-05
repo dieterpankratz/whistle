@@ -9,7 +9,11 @@
     <p id="current_long" ></p>
     <p id="alert_kind"><%= @alert.kind %></p>
   </div>
-  <%= link_to "Whistle", trip_alerts_path(@alert.trip, kind: "whistle"), method: :post, class: "whistle" %>
-  <%= link_to "Mark as Safe", trip_alerts_path(@alert.trip, kind: "safe"), method: :post, class: "safe" %>
+  <%= form_for(:alert, url: trip_alerts_path(@alert.trip, kind: "whistle"),html: { class: "alert-whistle-form" }) do |f| %>
+    <%= f.submit "Whistle", class: 'whistle' %>
+  <% end %>
+ <%= form_for(:alert, url: trip_alerts_path(@alert.trip, kind: "safe"),html: { class: "safe-form" }) do |f| %>
+   <%= f.submit "Mark as safe", class: 'safe' %>
+ <% end %>
   <div id="address"></div>
 </div>

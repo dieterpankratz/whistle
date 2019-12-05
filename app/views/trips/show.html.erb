@@ -7,7 +7,9 @@
     <p id="end_long" ><%= @trip.end_long %></p>
   </div>
   <div>
-  <%= link_to "Share my trip", trip_alerts_path(@trip, kind: "share"), method: :post, class: "share" %>
+  <%= form_for(:alert, url: trip_alerts_path(@trip, kind: "share"),html: { class: "show-trip-form" }) do |f| %>
+     <%= f.submit "Share my trip", class: 'share' %>
+   <% end %>
   </div>
 </div>
 
