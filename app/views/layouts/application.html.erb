@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable"  content="yes">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png" />
-    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= favicon_link_tag "/assets/favicon.png"%>
+<!--     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png" />
+ --><link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%= render 'shared/ios_pwa_links' %>
     <title>Whistle</title>
     <%= csrf_meta_tags %>
