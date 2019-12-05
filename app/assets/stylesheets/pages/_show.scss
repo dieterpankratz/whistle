@@ -3,7 +3,7 @@
 }
 
 .whistle{
-  background-color: rgb(175, 53, 87);
+  background-color: #AF3557;
   padding: 15px;
   margin: 5px;
   color: white;
@@ -19,11 +19,16 @@
   left: 0;
   right: 0;
   font-size: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+
+.whistle:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .whistle:focus {
-  color: #0a7176;
+  color: #AF3557;
   background-color: white;
   text-decoration: none;
 }
@@ -46,7 +51,12 @@
   left: 0;
   right: 0;
   font-size: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+
+.safe:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .safe:focus {
@@ -73,8 +83,13 @@
   left: 0;
   right: 0;
   font-size: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 
+}
+
+.share:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .share:focus {

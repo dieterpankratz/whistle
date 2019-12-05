@@ -18,7 +18,7 @@ const alertDisplay = async (map) => {
   const tripMap =  createMap(map, mapOptions);
 
 
- const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575468104/shelter_5_sthdlw.png';
+ const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575538481/Group_2_1_easwbj.svg';
 
 
   const shelters = [
@@ -56,7 +56,7 @@ const alertDisplay = async (map) => {
     console.log(durationString2);
 
     // 1. get coords from helpers (from alerts#show)
-    const helperMarker = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_50/v1575452323/helper_pfrd6b.png';
+    const helperMarker = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539270/helpers-def_1_ut5avl.svg';
     addHelperToMap(responderMarkers[0], tripMap, helperMarker, durationString1);
     addHelperToMap(responderMarkers[1], tripMap, helperMarker, durationString2);
 
@@ -66,8 +66,8 @@ const alertDisplay = async (map) => {
 
 
   // starting, ending positions
-  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/a-marker_snmd0w.png";
-  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/b-marker_tdfu6g.png";
+  const aMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539619/A2_1_esqi8d.svg";
+  const bMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539622/B2_1_hphvjs.svg";
   addAMarker(points[0], tripMap, aMarker);
   addAMarker(points[1], tripMap, bMarker);
 
