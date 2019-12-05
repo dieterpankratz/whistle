@@ -28,7 +28,7 @@ const addUserPosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
 
-  const currPushPin = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575538922/Group_1_1_qlzgqy.svg'
+  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/v1575542992/Group_1_3_y6l5ky.svg'
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,
