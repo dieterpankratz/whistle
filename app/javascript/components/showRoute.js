@@ -1,15 +1,16 @@
 
-import createMap from './createMap'
+import {createMap} from './createMap'
 import {addAMarker} from './addMarkersToMap'
 import {addMarkersToMap} from './addMarkersToMap'
 
 
-let coordinatesArray = [];
-let destinationLat = document.querySelector("#end_lat");
-let destinationLong= document.querySelector("#end_long");
-let startLat = document.querySelector("#start_lat")
-let startLong = document.querySelector("#start_long")
+
 function showRoute(map) {
+  let coordinatesArray = [];
+  let destinationLat = document.querySelector("#end_lat");
+  let destinationLong= document.querySelector("#end_long");
+  let startLat = document.querySelector("#start_lat")
+  let startLong = document.querySelector("#start_long")
   // wait until the content of the page is loaded:
   // points[0] is current location. points[1] is destination.
 

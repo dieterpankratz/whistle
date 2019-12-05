@@ -2,7 +2,7 @@ import {addAMarker} from './addMarkersToMap'
 import {addMarkersToMap} from './addMarkersToMap'
 import {addHelperToMap} from './addMarkersToMap'
 import {drawPath} from './showRoute'
-import createMap from './createMap'
+import {createMap} from './createMap'
 import {tripCoordinates} from './tripCoordinates'
 import {getCurrentCoords, addUserPosition, addWhistlePosition} from './currentPosition'
 import { getDurationToHelpersPosition } from './getDurationToHelpersPosition'
@@ -52,8 +52,8 @@ const alertDisplay = async (map) => {
     // get the duration from helper:
     let durationHelper1 = await getDurationToHelpersPosition({lat: 52.532023, long: 13.40112}, {lat: 52.535172, long: 13.405950});
     let durationHelper2 = await getDurationToHelpersPosition({lat: 52.532023, long: 13.40112}, {lat: 52.529119, long: 13.395488});
-    const durationString1 = Math.round((durationHelper1/60)).toString() + " Min";
-    const durationString2 = Math.round((durationHelper2/60)).toString() + " Min";
+    const durationString1 = "Chloé " + Math.round((durationHelper1/60)).toString() + " min";
+    const durationString2 = "Morgane " + Math.round((durationHelper2/60)).toString() + " min";
     console.log(durationString1);
     console.log(durationString2);
 

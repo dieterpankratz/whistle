@@ -26,4 +26,4 @@ const tripCoordinates = () => {
   return points;
 }
 
-export {tripCoordinates}
+export { tripCoordinates }

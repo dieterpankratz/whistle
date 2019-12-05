@@ -15,7 +15,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <!-- <meta name="GOOGLE_API_SERVER_KEY" content="<%#= ENV['GOOGLE_API_SERVER_KEY'] %>"> -->
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}"%>
-    <%= javascript_pack_tag 'application', async: true, defer: true %>
+    <%= javascript_pack_tag 'application' %>
+
   </head>
   <body style="background-color: white; position: relative;">
     <% if user_signed_in? %>
