@@ -1,8 +1,8 @@
 import { getCurrentCoords, addUserPosition } from '../components/currentPosition';
 import { currentLocationToForm } from '../components/currentLocationToForm';
 import {autocomplete} from '../components/autocomplete';
-import  createMap  from '../components/createMap';
-import addMarkersToMap from '../components/addMarkersToMap';
+import  { createMap}   from '../components/createMap';
+import { addMarkersToMap}  from '../components/addMarkersToMap';
 
 const mapDiv = document.querySelector("#newMap");
 
@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    tripsNew()
+    tripsNew();
   }
 
-})
+});
 
 

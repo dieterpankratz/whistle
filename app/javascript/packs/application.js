@@ -4,7 +4,7 @@ import '../components/burger';
 import { getCurrentCoords, addUserPosition } from '../components/currentPosition';
 import { currentLocationToForm } from '../components/currentLocationToForm';
 import { autocomplete } from '../components/autocomplete'
-import  {createMap}   from '../components/createMap';
+import {createMap } from '../components/createMap';
 import { showRoute } from '../components/showRoute';
 import { alertDisplay } from '../components/alertDisplay';
 import { addMarkersToMap } from '../components/addMarkersToMap';
