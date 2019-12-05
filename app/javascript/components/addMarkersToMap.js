@@ -23,7 +23,10 @@ export const addHelperToMap = (coordinate, map, icon = currPushPin, label) => {
         position: new google.maps.LatLng(coordinate.lat, coordinate.long),
         map: map,
         icon: icon,
-        label: label
+        label: {
+          text: label,
+          fontWeight: "bold"
+        }
       });
       latlngbounds.extend(marker.position);
 
