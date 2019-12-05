@@ -5,8 +5,8 @@ Connection.destroy_all
 Response.destroy_all
 User.destroy_all
 puts 'Creating users...'
-user_1 = User.create!(name: "Chloé", email: "user_1@example.com", password: "123456", username: "Baba", phone_number: "+4915786608080")
-user_2 = User.create!(name: "Lyndsey", email: "user_5@example.com", password: "123456", username: "Lyn", phone_number: "+4915257607967")
+user_1 = User.create!(name: "Chloé", email: "user_1@example.com", password: "123456", username: "Baba", phone_number: "+33640377827")
+user_2 = User.create!(name: "Lyndsey", email: "user_5@example.com", password: "123456", username: "Lyn", phone_number: "+4915786608080")
 user_3 = User.create!(name: "Thomas", email: "user_3@example.com", password: "123456", username: "Tomtom")
 user_4 = User.create!(name: "Dieter", email: "user_4@example.com", password: "123456", username: "Didi")
 user_5 = User.create!(name: "Morgane", email: "user_2@example.com", password: "123456", username: "Momo")
