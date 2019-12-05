@@ -1,7 +1,7 @@
 const currPushPin = 'https://res.cloudinary.com/pankratz117/image/upload/v1575142232/current_position_marker_e4jnlm.png';
 
 export const addMarkersToMap = (coordinates, map, icon = currPushPin) => {
-   var latlngbounds = new google.maps.LatLngBounds();
+   // var latlngbounds = new google.maps.LatLngBounds();
 
     coordinates.forEach(coordinate => {
       const marker =  new google.maps.Marker({
@@ -9,10 +9,10 @@ export const addMarkersToMap = (coordinates, map, icon = currPushPin) => {
         map: map,
         icon: icon
       });
-      latlngbounds.extend(marker.position)
+      // latlngbounds.extend(marker.position)
     })
 
-    map.fitBounds(latlngbounds)
+    // map.fitBounds(latlngbounds)
 }
 
 export const addHelperToMap = (coordinate, map, icon = currPushPin, label) => {
