@@ -13,7 +13,9 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}", async: true %>
+    <!-- <meta name="GOOGLE_API_SERVER_KEY" content="<%#= ENV['GOOGLE_API_SERVER_KEY'] %>"> -->
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}"%>
+    <%= javascript_pack_tag 'application', async: true, defer: true %>
 
   </head>
   <body style="background-color: white; position: relative;">
@@ -25,7 +27,5 @@
     <%= javascript_include_tag "application" %>
     <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
 
-    <%= javascript_pack_tag 'application' %>
-    <%= yield(:after_js) %>
   </body>
 </html>

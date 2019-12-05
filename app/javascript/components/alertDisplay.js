@@ -9,6 +9,7 @@ import { getDurationToHelpersPosition } from './getDurationToHelpersPosition'
 const alertDisplay = async (map) => {
   const points = tripCoordinates();
 
+    console.log(google)
   // create map for trip
   var mapOptions = {
     // LatLng class representing a pair of latitude and longitude coordinates, stored as degrees.
