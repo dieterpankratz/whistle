@@ -5,6 +5,7 @@ const createMap = (mapElement, options = {}) => {
     styles,
     disableDefaultUI: true
   }
+  console.log(mapElement)
   const newMap = new google.maps.Map(mapElement, mapOptions);
   return newMap
 }

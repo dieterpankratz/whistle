@@ -11,26 +11,23 @@ import { openNav } from '../components/burger'
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  openNav();
+
 })
-
-
-// trips show
-
-const tripShowMap = document.querySelector('#tripMap');
-
-if(tripShowMap) {
-  showRoute(tripShowMap);
-}
-
-
-
-
-// trips new
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  // BELOW: BURGER MENU
+  openNav();
+
+
+  // BELOW: TRIP SHOW CODE
+  const tripShowMap = document.querySelector('#tripMap');
+  if(tripShowMap) {
+    showRoute(tripShowMap);
+  }
+
+  // BELOW: TRIP NEW CODE
   const tripNewMap = document.querySelector("#newMap");
   if (tripNewMap) {
     // get current coordinates
@@ -89,6 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
     tripsNew()
   }
 
+  // BELOW: ALERT SHOW CODE
+  const alertMap = document.getElementById("alertMap")
+  if (alertMap) {
+    alertDisplay(alertMap)
+  }
+
+
 })
 
 
@@ -97,10 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const alertMap = document.getElementById("alertMap")
-if (alertMap) {
-  alertDisplay(alertMap)
-}
 
 
 
