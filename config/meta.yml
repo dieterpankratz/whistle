@@ -1,0 +1,4 @@
+meta_product_name: "Whistle"
+meta_title: "Whistle - Help someone now."
+meta_description: "Help your friends. Get help."
+meta_image: "./app/assets/images/logo-whistle" # should exist in `app/assets/images/`
