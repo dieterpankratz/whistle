@@ -4,7 +4,7 @@
 
 <div class="destination-container">
         <%= simple_form_for @trip do |f| %>
-          <%= f.input :end_point, placeholder: "Destination", html: {id: "end_point"}, label: false %>
+          <%= f.input :end_point, placeholder: "Where are you going?", html: {id: "end_point"}, label: false %>
           <%= f.input :start_lat, :as => :hidden, html: {id: "start_lat"}  %>
           <%= f.input :start_long, :as => :hidden, html: {id: "start_long"}  %>
           <%= f.submit "Go!", class:"btn btn-primary" %>

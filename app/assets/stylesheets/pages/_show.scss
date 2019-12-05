@@ -4,14 +4,14 @@
 
 .whistle{
   background-color: #AF3557;
-  padding: 15px;
-  margin: 5px;
+  padding: 25px;
+  margin: Opx;
   color: white;
   border-radius: 5px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 80px;
+  bottom: 20px;
   width: 80%;
   text-align: center;
   margin-left: auto;
@@ -36,21 +36,21 @@
 .safe{
   background-color: #0a7176;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  padding: 15px;
-  margin: 0px;
+  padding: 10px;
+  margin: 5px;
   color: white;
   border-radius: 5px;
   position: absolute;
   z-index: 2;
   opacity: 1;
-  bottom: 20px;
+  bottom: 100px;
   width: 80%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 
@@ -103,13 +103,16 @@
   border-radius: 10px;
   font-weight: bold;
   position: absolute;
-  top: 9px;
-  left: 75px;
+  // top: 100px;
+  // left:10px;
   z-index: 2;
   opacity: 1;
-  margin-left: auto;
-  margin-right: auto;
+  // width: 100px;
+  top: 15%;
+  left: 50%;
+  margin-left: -170px;
 }
+
 
 .btn-primary {
   background-color: #0a7176;
@@ -124,5 +127,5 @@
 
 .form-control {
   height: 50px;
-  width: 215px;
+  width: 290px;
 }
