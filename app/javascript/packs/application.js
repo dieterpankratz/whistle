@@ -1,5 +1,4 @@
 import "bootstrap";
-import '../components/burger';
 
 import { getCurrentCoords, addUserPosition } from '../components/currentPosition';
 import { currentLocationToForm } from '../components/currentLocationToForm';
@@ -8,11 +7,17 @@ import {createMap } from '../components/createMap';
 import { showRoute } from '../components/showRoute';
 import { alertDisplay } from '../components/alertDisplay';
 import { addMarkersToMap } from '../components/addMarkersToMap';
+import { openNav } from '../components/burger'
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  openNav();
+})
 
 
 // trips show
 
-const tripShowMap = document.querySelector('#tripMap')
+const tripShowMap = document.querySelector('#tripMap');
 
 if(tripShowMap) {
   showRoute(tripShowMap);
@@ -23,10 +28,10 @@ if(tripShowMap) {
 
 // trips new
 
-const tripNewMap = document.querySelector("#newMap");
 
-console.log(tripNewMap)
+
 document.addEventListener('DOMContentLoaded', function() {
+  const tripNewMap = document.querySelector("#newMap");
   if (tripNewMap) {
     // get current coordinates
 
