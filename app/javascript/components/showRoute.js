@@ -32,14 +32,14 @@ function showRoute(map) {
   const mapOptions = {
     // LatLng class representing a pair of latitude and longitude coordinates, stored as degrees.
     center: new google.maps.LatLng(coordinatesArray[0].lat,coordinatesArray[0].long),
-    zoom: 15,
+    zoom: 15
   }
 
   const tripMap = createMap(map, mapOptions);
 
   // addMarkersToMap(coordinatesArray, tripMap);
 
-  const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575468104/shelter_5_sthdlw.png';
+  const shelterLogo = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575538481/Group_2_1_easwbj.svg';
 
   const shelters = [
     {
@@ -67,8 +67,8 @@ function showRoute(map) {
 
   addMarkersToMap(shelters, tripMap, shelterLogo)
 
-  const aMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/a-marker_snmd0w.png";
-  const bMarker = "https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/b-marker_tdfu6g.png";
+  const aMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539619/A2_1_esqi8d.svg";
+  const bMarker = "https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575539622/B2_1_hphvjs.svg";
 
   addAMarker(startingCoords, tripMap, aMarker);
   addAMarker(destinationCoords, tripMap, bMarker);
@@ -81,7 +81,7 @@ function drawPath(map, coordinates) {
   var directionsRenderer = new google.maps.DirectionsRenderer();
   var mapOptions = {
     center: new google.maps.LatLng(coordinates[0].lat,coordinates[0].long),
-    zoom: 15,
+    zoom: 15
   }
 
   // map generated from createMap.js

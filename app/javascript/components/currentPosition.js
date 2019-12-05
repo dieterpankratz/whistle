@@ -28,7 +28,7 @@ const addUserPosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
 
-  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575447337/Group_1_1_iqbse2.png'
+  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/v1575542992/Group_1_3_y6l5ky.svg'
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,
@@ -42,7 +42,7 @@ const addWhistlePosition = (map, latitude, longitude) => {
   const currentLatLong = new google.maps.LatLng(latitude, longitude);
 
 
-  const currPushPin = 'https://res.cloudinary.com/frijolyfrailejon/image/upload/c_scale,w_40/v1575452323/whistle_mbzpwr.png'
+  const currPushPin = 'https://res.cloudinary.com/dzqtwmsqg/image/upload/v1575538922/Group_1_1_qlzgqy.svg'
   const currentMarker = new google.maps.Marker({
     position: currentLatLong,
     map: map,

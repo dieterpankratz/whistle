@@ -6,6 +6,7 @@
     "bootstrap": "^4.3.1",
     "gmaps": "^0.4.24",
     "jquery": "^3.4.1",
+    "load-google-maps-api": "^2.0.1",
     "places.js": "^1.17.1",
     "popper.js": "^1.16.0"
   },
