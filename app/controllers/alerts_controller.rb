@@ -37,8 +37,8 @@ class AlertsController < ApplicationController
 
     if @alert.kind == "safe"
       redirect_to new_trip_path
-    else
-      redirect_to alert_path(@alert)
+    # else
+    #   redirect_to alert_path(@alert)
     end
   end
 
