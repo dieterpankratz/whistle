@@ -8,8 +8,10 @@ const getCurrentCoords = (resolve, reject) => {
   if(navigator.geolocation) {
 
     navigator.geolocation.getCurrentPosition((position) => {
-      lng = position.coords.longitude;
-      lat = position.coords.latitude;
+      // lng = position.coords.longitude;
+      // lat = position.coords.latitude;
+      lng = 13.399760;
+      lat = 52.537790;
        resolve({lat, lng});
      }, onError);
 

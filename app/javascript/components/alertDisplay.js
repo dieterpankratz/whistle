@@ -79,7 +79,7 @@ const alertDisplay = async (map) => {
     const coordsPromise = new Promise(getCurrentCoords);
     const coords =  await coordsPromise;
     console.log({coords})
-    addWhistlePosition(tripMap, 52.5324076, 13.3948529)
+    addWhistlePosition(tripMap, 52.532561, 13.398968)
   }
 
 }
